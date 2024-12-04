@@ -66,52 +66,6 @@ tiene_sintomas([H|T]) :-
     sintoma(H),
     tiene_sintomas(T).
 
-% Quema de aceite
-diagnostico_detallado(quema_aceite) :-
-    write('El motor está quemando aceite. Esto puede deberse a anillos de pistón desgastados, cilindros rayados o sellos de válvula dañados.'),
-    nl,
-    write('Recomendación: Verifica el estado de los anillos, los cilindros y los sellos de válvula.').
-
-% Vehículo recalentado
-diagnostico_detallado(vehiculo_recalentado) :-
-    write('El vehículo está recalentando. Las posibles causas incluyen un nivel bajo de refrigerante, fugas en el sistema de refrigeración o una empaquetadura soplada.'),
-    nl,
-    write('Recomendación: Revisa el nivel de refrigerante, busca fugas y verifica el estado de la empaquetadura.').
-
-% Exceso de humo negro
-diagnostico_detallado(exceso_humo_negro) :-
-    write('Se detecta un exceso de humo negro en el escape. Esto suele indicar problemas con el sistema de inyección o un filtro de aire obstruido.'),
-    nl,
-    write('Recomendación: Limpia o reemplaza el filtro de aire y verifica los inyectores de combustible.').
-
-% Fallo en el clutch
-diagnostico_detallado(fallo_en_el_clutch) :-
-    write('El sistema de clutch presenta fallos. Esto puede deberse a desgaste en el disco o en los resortes del plato de presión.'),
-    nl,
-    write('Recomendación: Inspecciona el estado del disco de clutch y el plato de presión.').
-
-% Banda de distribución dañada
-diagnostico_detallado(banda_de_distribucion_danada) :-
-    write('La banda de distribución está dañada o desgastada. Esto puede causar desincronización en las válvulas y los pistones.'),
-    nl,
-    write('Recomendación: Cambia la banda de distribución y verifica el estado de los tensores.').
-
-% Fallo en el sistema de lubricación
-diagnostico_detallado(fallo_sistema_lubricacion) :-
-    write('El sistema de lubricación no está funcionando correctamente. Esto puede deberse a un nivel bajo de aceite, filtros obstruidos o una bomba de aceite defectuosa.'),
-    nl,
-    write('Recomendación: Revisa el nivel y la calidad del aceite, cambia los filtros y verifica la bomba de aceite.').
-
-% Consumo excesivo de combustible
-diagnostico_detallado(consumo_excesivo_combustible) :-
-    write('El consumo de combustible es excesivo. Esto puede deberse a una mala calibración en el sistema de inyección o a fugas en el tanque de combustible.'),
-    nl,
-    write('Recomendación: Calibra el sistema de inyección y verifica que no haya fugas en el sistema de combustible.').
-
-% Diagnóstico genérico
-diagnostico_detallado(_) :-
-    write('No se cuenta con información detallada para este problema. Revisa los síntomas más comunes asociados al vehículo.').
-
 % ---- DIAGNÓSTICOS DETALLADOS ----
 % Diagnóstico basado en preguntas específicas
 diagnostico(Sintomas, Problema) :- 

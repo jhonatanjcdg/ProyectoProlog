@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { DiagnosticoController } from './diagnostico/diagnostico.controller';
+import { DiagnosticoService } from './diagnostico/diagnostico.service';
+import { PrologService } from './prolog/prolog.service';
+import { DiagnosticoModule } from './diagnostico/diagnostico.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [DiagnosticoModule],
+  controllers: [DiagnosticoController],
+  providers: [DiagnosticoService, PrologService],
 })
 export class AppModule {}
